@@ -20,6 +20,7 @@ export function Posts() {
   const { data, isLoading, isError, error } = useQuery('posts', fetchPosts, {
     staleTime: 2000,
   });
+
   if (isLoading) return <h1>Loading...</h1>;
   if (isError)
     return (
