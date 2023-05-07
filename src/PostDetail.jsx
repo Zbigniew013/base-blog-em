@@ -27,7 +27,7 @@ export function PostDetail({ post }) {
   // replace with useQuery
   // const data = [];
   const { data, isLoading, isError, error } = useQuery(
-    'comments',
+    ['comments', post.id],
     () => fetchComments(post.id),
     { staleTime: 2000 }
   );
